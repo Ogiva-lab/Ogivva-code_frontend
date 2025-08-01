@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
+
+body{
+  height: 100vh;
+}
+
+/* styles.css */
+.bg-soft-green-gradient {
+  background: linear-gradient(90deg, hsla(135, 82%, 87%, 1) 0%, hsla(136, 100%, 97%, 1) 31%, hsla(69, 100%, 95%, 1) 68%, hsla(135, 95%, 93%, 1) 100%);
+}
+
+/* Hide scrollbar but keep scrollable */
+.scrollbar-hidden {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;            
+}
+
+.text-2xs {
+  font-size: 10px;
+}
+
+@theme {
+  /* Color Palletes... Colors that will be used throughout the project*/
+  /* === Base === */
+  --color-header: #36334B;           /* Headings */
+  --color-textgray: #64748B;             /* Body text */
+  --color-text-light: #E7EAEE;       /* Light text */
+  --color-borderbg: #D0D5DD;           /* Borders */
+
+  /* === Green === */
+  --color-green: #19BD42;            /* Primary green */
+  --color-greendarker: #11822D;            /* Darker green */
+  --color-green-bg: #E8FBED;         /* Light green bg */
+  --color-green-text: #19BD42;       /* Green text */
+  --color-green-faint: #E8FBED;      /* Faint green */
+
+  /* === Buttons === */
+  --color-btn-primary: #19BD42;      /* Main button */
+  --color-btn-secondary: #E8FBED;    /* Light button */
+
+  /* === Tags === */
+  --color-tag-fashion: #EDCFFF;      /* Fashion tag */
+  --color-tag-food: #CFFFDC;         /* Food tag */
+  --color-tag-health: #CFDAFF;       /* Health tag */
+
+  /* === Status === */
+  --color-status-sending: #FFFBEB;   /* Sending */
+  --color-status-success: #10B981;   /* Success */
+  --color-status-pending: #F59E0B;   /* Pending */
+  --color-status-failed: #EF4444;    /* Failed */
+
+  /* Fonts */
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-fredoka: "Fredoka", sans-serif;
+}
+
+@layer base {
+  /* input {
+    @apply border py-3 px-4 border-gray-200 rounded-md text-[#A0ABBB] outline-none
+  } */
+}
+
+@layer components {
+  .button1 {
+    @apply py-3.5 text-center bg-btn-primary text-green-faint rounded-lg
+  }
+
+  .button2 {
+    @apply py-3.5 text-center bg-btn-secondary text-green-text rounded-lg
+  }
+
+  .button3 {
+    @apply border border-borderbg text-textgray active:border-greendarker active:text-black active:bg-green-faint py-2
+  }
+}
